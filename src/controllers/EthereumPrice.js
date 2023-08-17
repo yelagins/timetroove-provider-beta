@@ -1,24 +1,13 @@
-export default async () => {
+import { defaultState } from "../helpers";
 
-    // Do your request for series
+let state = {};
 
-	return {
-		categories: [
-			"2023-08-03",
-			"2023-08-04",
-			"2023-08-05",
-			"2023-08-06",
-			"2023-08-07",
-			"2023-08-08",
-			"2023-08-09",
-			"2023-08-10",
-			"2023-08-11",
-			"2023-08-12",
-			"2023-08-13",
-			"2023-08-14",
-			"2023-08-15",
-			"2023-08-16",
-		],
-		series: [1, 1, 1, 1, 1, 2, 1, 5, 1, 2, 1, 1, 1, 1],
-	};
+export default {
+	run: async (controller) => {
+        state = defaultState;
+	},
+
+	getData: async () => {
+		return state;
+	},
 };

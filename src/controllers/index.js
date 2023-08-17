@@ -1,5 +1,7 @@
 import EthereumPrice from "./EthereumPrice";
+import GenslrPrice from "./GenslrPrice";
 
 export { 
-    EthereumPrice
+    EthereumPrice,
+    GenslrPrice,
 };
