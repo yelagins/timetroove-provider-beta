@@ -1,12 +1,14 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const dotenv = require('dotenv');
 
 const controllers = require("./controllers");
 const { promptToNames, promptToData, getContr, getControllersNames } = require("./helpers");
+dotenv.config({ path: '.env' });
 
 const app = express();
-const port = 3002;
+const port = process.env.PORT || 3002;
 
 app.use(cors());
 app.options("*", cors());
